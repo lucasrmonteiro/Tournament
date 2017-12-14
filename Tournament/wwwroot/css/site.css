@@ -33,3 +33,15 @@
         display: none;
     }
 }
+
+h1, h2, h3 {
+    font-family: 'Bungee', cursive;
+}
+
+h1 {
+    color: #767705;
+}
+
+h2 {
+    color: #0e7188;
+}

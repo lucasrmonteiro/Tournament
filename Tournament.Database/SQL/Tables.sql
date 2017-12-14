@@ -35,16 +35,30 @@ CREATE TABLE Match(
 	CONSTRAINT FK_Match_Winner FOREIGN KEY (Winner) REFERENCES Tournament (TeamId)
 )
 
+CREATE TABLE Position(
+	IdPosition bigint IDENTITY(1,1),
+	NamePosition VARCHAR(200),
+	
+	CONSTRAINT PK_Position PRIMARY KEY (IdPosition)
+)
+
+INSERT INTO Position (NamePosition) VALUES ('TopLaner')
+INSERT INTO Position (NamePosition) VALUES ('Jungle')
+INSERT INTO Position (NamePosition) VALUES ('MidLaner')
+INSERT INTO Position (NamePosition) VALUES ('ADCarry')
+INSERT INTO Position (NamePosition) VALUES ('Suport')
 
 CREATE TABLE Player(
 
 	PlayerId bigint IDENTITY(1,1),
+	TeamId bigint,
+	IdPosition bigint,
 	[Name] VARCHAR(200),
 	BirthDate DATETIME,
 	Genre VARCHAR(1),
-	TeamId bigint,
 
 	CONSTRAINT PK_Player PRIMARY KEY (PlayerId),
 	CONSTRAINT FK_Player_Team FOREIGN KEY (TeamId) REFERENCES Tournament (TeamId),
-	CONSTRAINT CHK_Player_Sex CHECK (Genre = 'H' or Genre = 'M')
+	CONSTRAINT FK_Player_Position FOREIGN KEY (IdPosition) REFERENCES Position (IdPosition),
+	CONSTRAINT CHK_Player_Sex CHECK (Genre = 'H' or Sex = 'M')
 )
