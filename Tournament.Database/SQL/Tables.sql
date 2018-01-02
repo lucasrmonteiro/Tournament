@@ -30,9 +30,9 @@ CREATE TABLE Match(
 
 	CONSTRAINT PK_Match PRIMARY KEY (MatchId),
 	CONSTRAINT FK_Match_Tournament FOREIGN KEY (TournamentId) REFERENCES Tournament (TournamentId),
-	CONSTRAINT FK_Match_Team1 FOREIGN KEY (Team1) REFERENCES Tournament (TeamId),
-	CONSTRAINT FK_Match_Team2 FOREIGN KEY (Team2) REFERENCES Tournament (TeamId),
-	CONSTRAINT FK_Match_Winner FOREIGN KEY (Winner) REFERENCES Tournament (TeamId)
+	CONSTRAINT FK_Match_Team1 FOREIGN KEY (Team1) REFERENCES Team (TeamId),
+	CONSTRAINT FK_Match_Team2 FOREIGN KEY (Team2) REFERENCES Team (TeamId),
+	CONSTRAINT FK_Match_Winner FOREIGN KEY (Winner) REFERENCES Team (TeamId)
 )
 
 CREATE TABLE Position(
@@ -58,7 +58,7 @@ CREATE TABLE Player(
 	Genre VARCHAR(1),
 
 	CONSTRAINT PK_Player PRIMARY KEY (PlayerId),
-	CONSTRAINT FK_Player_Team FOREIGN KEY (TeamId) REFERENCES Tournament (TeamId),
+	CONSTRAINT FK_Player_Team FOREIGN KEY (TeamId) REFERENCES Team (TeamId),
 	CONSTRAINT FK_Player_Position FOREIGN KEY (IdPosition) REFERENCES Position (IdPosition),
-	CONSTRAINT CHK_Player_Sex CHECK (Genre = 'H' or Sex = 'M')
+	CONSTRAINT CHK_Player_Sex CHECK (Genre = 'H' or Genre = 'M')
 )

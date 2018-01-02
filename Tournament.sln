@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2010
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tournament", "Tournament\Tournament.csproj", "{0B901B12-F492-4DFA-A22A-C2A358C61327}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tournament.UI", "Tournament\Tournament.UI.csproj", "{0B901B12-F492-4DFA-A22A-C2A358C61327}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tournament.Database", "Tournament.Database\Tournament.Database.csproj", "{27291DEA-857D-4EC2-B090-CA9D9FACA969}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tournament.Business", "Tournament.Business\Tournament.Business.csproj", "{42B548EA-0DEB-49CC-9D73-0054EC67A375}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tournament.Business", "Tournament.Business\Tournament.Business.csproj", "{42B548EA-0DEB-49CC-9D73-0054EC67A375}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tournament.Database.Models", "Tournament.Database\Tournament.Database.Models.csproj", "{9C8A77E6-EC45-43C8-A3C1-478AF95051A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tournament.API", "Tournament.API\Tournament.API.csproj", "{0A089763-B91A-4036-B9E8-9DF24BC208F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +21,18 @@ Global
 		{0B901B12-F492-4DFA-A22A-C2A358C61327}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B901B12-F492-4DFA-A22A-C2A358C61327}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B901B12-F492-4DFA-A22A-C2A358C61327}.Release|Any CPU.Build.0 = Release|Any CPU
-		{27291DEA-857D-4EC2-B090-CA9D9FACA969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{27291DEA-857D-4EC2-B090-CA9D9FACA969}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{27291DEA-857D-4EC2-B090-CA9D9FACA969}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{27291DEA-857D-4EC2-B090-CA9D9FACA969}.Release|Any CPU.Build.0 = Release|Any CPU
 		{42B548EA-0DEB-49CC-9D73-0054EC67A375}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{42B548EA-0DEB-49CC-9D73-0054EC67A375}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42B548EA-0DEB-49CC-9D73-0054EC67A375}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42B548EA-0DEB-49CC-9D73-0054EC67A375}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C8A77E6-EC45-43C8-A3C1-478AF95051A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C8A77E6-EC45-43C8-A3C1-478AF95051A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C8A77E6-EC45-43C8-A3C1-478AF95051A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C8A77E6-EC45-43C8-A3C1-478AF95051A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A089763-B91A-4036-B9E8-9DF24BC208F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A089763-B91A-4036-B9E8-9DF24BC208F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A089763-B91A-4036-B9E8-9DF24BC208F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A089763-B91A-4036-B9E8-9DF24BC208F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
