@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace Tournament.Database.Models.DB
+namespace Tournament.DAO
 {
     public partial class DB_Torneio_DEVContext : DbContext
     {
@@ -70,7 +70,7 @@ namespace Tournament.Database.Models.DB
 
             modelBuilder.Entity<Position>(entity =>
             {
-                entity.HasKey(e => e.IdPosition);
+                entity.HasKey(e => e.Id);
 
                 entity.Property(e => e.NamePosition)
                     .HasMaxLength(200)

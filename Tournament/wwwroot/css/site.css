@@ -36,6 +36,7 @@
 
 h1, h2, h3 {
     font-family: 'Bungee', cursive;
+    text-align:center;
 }
 
 h1 {
@@ -44,4 +45,9 @@ h1 {
 
 h2 {
     color: #0e7188;
+}
+
+.size-box {
+    height: 206px;
+    margin-right:10px;
 }

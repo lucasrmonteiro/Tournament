@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tournament.Database\Tournament.Database.Models.csproj" />
+    <ProjectReference Include="..\Tournament.Database\Tournament.DAO.csproj" />
   </ItemGroup>
 
 </Project>

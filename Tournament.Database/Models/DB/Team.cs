@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Tournament.Database.Models.DB
+namespace Tournament.DAO
 {
-    public partial class Team
+    public partial class Team :BaseEntity
     {
         public Team()
         {
@@ -13,7 +13,6 @@ namespace Tournament.Database.Models.DB
             Player = new HashSet<Player>();
         }
 
-        public long TeamId { get; set; }
         public string Name { get; set; }
 
         public ICollection<Match> MatchTeam1Navigation { get; set; }

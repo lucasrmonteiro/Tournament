@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Tournament.Database.Models.DB
+namespace Tournament.DAO
 {
-    public partial class Player
+    public partial class Player :BaseEntity
     {
-        public long PlayerId { get; set; }
         public long? TeamId { get; set; }
         public long? IdPosition { get; set; }
         public string Name { get; set; }

@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Tournament.Database.Models.DB
+namespace Tournament.DAO
 {
-    public partial class Match
+    public partial class Match : BaseEntity
     {
-        public long MatchId { get; set; }
         public long? TournamentId { get; set; }
         public int? RoundNum { get; set; }
         public long? Team1 { get; set; }
